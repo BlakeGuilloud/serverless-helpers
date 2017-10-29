@@ -12,7 +12,7 @@ const handleSuccess = response => ({
 
 const handleError = err => ({
   statusCode: 500,
-  message: err || 'Something went terribly wrong.',
+  message: err.message || 'Something went terribly wrong.',
   headers: responseHeaders, 
 });
 
