@@ -16,8 +16,17 @@ const handleError = err => ({
   headers: responseHeaders, 
 });
 
+const tryParse = body => {
+  try {
+    return JSON.parse(body);
+  } catch (err) {
+    return body;
+  }
+};
+
 module.exports = {
   handleError,
   handleSuccess,
+  tryParse,
   responseHeaders,
 };
