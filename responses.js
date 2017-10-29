@@ -4,21 +4,17 @@ const responseHeaders = {
   'Content-Type': 'application/json',
 };
 
-function handleSuccess(response) {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(response),
-    headers: responseHeaders,
-  }
-}
+const handleSuccess = response => ({
+  statusCode: 200,
+  body: JSON.stringify(response),
+  headers: responseHeaders,  
+});
 
-function handleError(err) {
-  return {
-    statusCode: 500,
-    message: 'Something went terribly wrong.',
-    headers: responseHeaders,
-  }
-}
+const handleError = err => ({
+  statusCode: 500,
+  message: 'Something went terribly wrong.',
+  headers: responseHeaders, 
+});
 
 module.exports = {
   handleError,
