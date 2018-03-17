@@ -2,8 +2,11 @@
 
 A collection of helper functions I use across my serverless apps.
 
+### Helpers
+Exports:
+- tryParse
 
-### /responses
+### Responses
 Attach proper CORS headers to all lambda responses.
 
 Exports:
